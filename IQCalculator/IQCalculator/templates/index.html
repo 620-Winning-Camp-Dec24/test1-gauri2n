@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>IQ Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>IQ Calculator</h1>
+    <form id="iqForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label>Question 1: What is 2 + 2?</label>
+      <input type="number" name="q1" required>
+      
+      <label>Question 2: What is 3 + 3?</label>
+      <input type="number" name="q2" required>
+      
+      <button type="submit">Calculate IQ</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
